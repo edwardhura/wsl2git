@@ -1,0 +1,17 @@
+language: bash
+
+sudo: required
+
+os:
+  - linux
+
+before_install:
+  - ./test-ci/setup.sh
+
+script:
+  - ./test-ci/main.sh
+
+notifications:
+  email:
+    on_success: never
+    on_failure: always
